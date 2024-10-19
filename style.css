@@ -1,0 +1,375 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #8338ec;
+  --secondary-color: #03dac6;
+}
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav {
+}
+
+header.yk-pf-header-container {
+  padding-top: 80px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, #ff7b00, #ff006e, #8338ec, #007bff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease-in-out infinite alternate-reverse;
+}
+
+.header-container {
+  position: relative;
+  top: 10vh;
+  padding: 32px;
+  width: 80vw;
+  height: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: auto;
+  gap: 24px;
+  border-radius: 48px;
+  background-color: var(--background-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.yk-pf-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / span 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+img.yk-pf-pheader-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.yk-pf-about {
+  grid-column: 2 / span 1;
+  padding-left: 4vw;
+  padding-right: 40px;
+}
+
+span.yk-pf-hello {
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.yk-pf-about h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+span.yk-pf-job-title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+p.yk-pf-about-me {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.yk-pf-contact {
+  margin: 10px 0 10px 0;
+}
+
+.yk-pf-header-social {
+  margin-top: 50px;
+}
+
+.yk-pf-header-social i {
+  margin-right: 20px;
+  font-size: 24px;
+  background: linear-gradient(135deg, #ff7b00, #ff006e, #8338ec, #007bff);
+  -webkit-background-clip: text; /* Pour Safari */
+  background-clip: text; /* Pour les autres navigateurs */
+  color: transparent; /* Rend le texte transparent pour laisser passer le fond */
+}
+
+section.yk-pf-portfolio-container {
+  margin-top: 200px;
+  padding: 20px 0 100px 0;
+}
+
+.yk-pf-section-title-container {
+  width: 80vw;
+}
+
+h2.yk-pf-section-title {
+  font-size: 48px;
+}
+
+/* Conteneur de la grille pour les cards */
+.yk-pf-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 cards sur PC */
+  gap: 24px; /* Espacement entre les cards */
+  width: 80vw;
+}
+
+/* Style de base pour la card */
+.yk-pf-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image du haut */
+.yk-pf-card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #007bff; /* Ligne de séparation en bas de l'image */
+}
+
+/* Corps de la card */
+.yk-pf-card-body {
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+/* Conteneur du titre et des icônes */
+.yk-pf-card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Titre de la card */
+.yk-pf-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Conteneur pour les icônes */
+.yk-pf-card-icons-container i {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.yk-pf-card-icons-container i:hover {
+  color: var(--primary-color);
+}
+
+/* Texte de la card */
+.yk-pf-card-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+/* Effet de hover pour la card */
+.yk-pf-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style du conteneur de la scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f1f1f1; /* Couleur de fond de la scrollbar */
+}
+
+/* Style de la "thumb" (le bouton à faire glisser) avec un dégradé */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff7b00, #ff006e, #8338ec, #007bff);
+  border-radius: 6px;
+}
+
+/* Optionnel: Style lors du hover pour la thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    #ff7b00,
+    #8338ec,
+    #007bff
+  ); /* Plus de bleu pour le hover */
+}
+
+/* Footer styling */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: one for contact info, one for the image */
+  align-items: center;
+  padding: 40px;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
+}
+
+/* Contact section styling */
+.yk-pf-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between each block */
+  padding: 0 12vw;
+  text-align: center;
+}
+
+.yk-pf-section-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--primary-color);
+}
+
+.yk-pf-footer-text {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+/* Contact info section styling */
+.yk-pf-header-info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between each contact info item */
+}
+
+.yk-pf-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  font-size: 1rem;
+}
+
+.yk-pf-phone i {
+  color: var(--primary-color); /* Color for icons */
+}
+
+/* Footer image styling */
+.yk-pf-footer-img img {
+  width: 80%; /* Reduce the width to 80% of the available space */
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 0 auto; /* Center the image */
+}
+
+/* Responsive behavior for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  header.yk-pf-header-container {
+    
+    padding: 40px;
+  }
+
+  .header-container {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    width: 90%;
+  }
+
+  .yk-pf-picture,
+  .yk-pf-about {
+    grid-column: 1 / span 1; /* Both items stack in one column */
+  }
+
+  .yk-pf-picture {
+    height: 100%;
+  }
+
+  section.yk-pf-portfolio-container {
+    margin-top: 100px;
+    padding: 20px 0 50px 0;
+  }
+
+  .yk-pf-card {
+    max-width: 100%;
+  }
+  .yk-pf-work-grid {
+    grid-template-columns: repeat(1, 1fr); /* 2 cards sur tablette */
+  }
+
+  footer {
+    grid-template-columns: 1fr; /* Stack contact and image vertically */
+    text-align: center; /* Center align text for small screens */
+  }
+
+  .yk-pf-footer-img {
+    margin-top: 20px;
+  }
+
+  .yk-pf-footer-img img {
+    max-width: 60%; /* Reduce image size further on smaller screens */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
+/* Responsive behavior for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  header.yk-pf-header-container {
+    padding: 20px;
+  }
+
+  .header-container {
+    grid-template-columns: 1fr; /* Ensure it remains single column */
+    width: 80%;
+  }
+
+  .yk-pf-picture {
+    height: 100%;
+  }
+
+  .yk-pf-work-grid {
+    grid-template-columns: 1fr; /* 1 card sur mobile */
+  }
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -10,45 +11,49 @@
     <title>YadeDev - Portfolio</title>
   </head>
   <body>
-    <nav></nav>
+    <!-- <nav><button onclick="toggleTheme()">Toggle Dark Mode</button></nav> -->
     <main>
       <header class="yk-pf-header-container">
         <div class="header-container">
           <div class="yk-pf-picture">
-            <img src="images/ek-personal.jpg" alt="" srcset="" />
+            <img src="images/ek-personal-2.jpg" alt="" srcset="" />
           </div>
           <div class="yk-pf-about">
             <span class="yk-pf-hello">Hello Everybody, i am</span>
-            <h1>Eric Kayembe</h1>
+            <h1>YakeDev</h1>
             <span class="yk-pf-job-title">Junior Front-End Developer</span>
             <p class="yk-pf-about-me">
-              Hi, I'm Eric Kay, a junior front-end developer with a passion for
+              Hi, I'm YakeDev, a junior front-end developer with a passion for
               creating intuitive and responsive websites. My journey into coding
               began with an interest in web design, and since then, I've
               developed skills in HTML, CSS, and JavaScript to bring my ideas to
               life.
             </p>
             <div class="yk-pf-header-info-contact">
-              <div class="yk-pf-phone">
+              <div class="yk-pf-contact">
                 <i class="bi bi-telephone"></i> +243 814 886 101
               </div>
-              <div class="yk-pf-phone">
+              <div class="yk-pf-contact">
                 <i class="bi bi-envelope"></i> erickay.dev@gmail.com
               </div>
-              <div class="yk-pf-phone">
+              <div class="yk-pf-contact">
                 <i class="bi bi-geo-alt"></i> Lubumbashi, HK, DR. Congo
               </div>
             </div>
             <div class="yk-pf-header-social">
-              <i class="bi bi-github"></i>
-              <i class="bi bi-linkedin"></i>
-              <i class="bi bi-twitter-x"></i>
+              <a href="https://github.com/YakeDev/" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+             <a href="http://" target="_blank" rel="noopener noreferrer"> <i class="bi bi-linkedin"></i></a>
+              <a href="http://" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
             </div>
           </div>
         </div>
       </header>
+      <!-- Works -->
       <section class="yk-pf-portfolio-container">
-        <h2 class="yk-pf-section-title">My lastest work</h2>
+        <div class="yk-pf-section-title-container">
+          <h2 class="yk-pf-section-title">My lastest work</h2>
+        </div>
+        
         <div class="yk-pf-work-grid">
           <div class="yk-pf-card">
             <img
@@ -205,8 +210,10 @@
         </div>
       </div>
       <div class="yk-pf-footer-img">
-        <img src="images/ek-personal.jpg" alt="" srcset="" />
+        <img src="images/ek-personal-2.jpg" alt="" srcset="" />
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
